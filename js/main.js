@@ -62,9 +62,35 @@
         });
     }
 
+    // --- FAQ Accordion ---
+    var faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(function (item) {
+        var button = item.querySelector('.faq-question');
+        if (button) {
+            button.addEventListener('click', function () {
+                var isOpen = item.classList.contains('open');
+
+                // Close all others
+                faqItems.forEach(function (other) {
+                    other.classList.remove('open');
+                    var otherBtn = other.querySelector('.faq-question');
+                    if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                });
+
+                // Toggle current
+                if (!isOpen) {
+                    item.classList.add('open');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+        }
+    });
+
     // --- Contact Form Handling ---
     var contactForm = document.getElementById('contactForm');
 
+    if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
         var formAction = contactForm.getAttribute('action');
 
@@ -104,6 +130,7 @@
             '<h3>Vielen Dank!</h3>' +
             '<p>Ihre Nachricht ist angekommen. Wir melden uns schnellstm&ouml;glich bei Ihnen.</p>' +
             '</div>';
+    }
     }
 
 })();

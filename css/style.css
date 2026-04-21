@@ -871,3 +871,329 @@ img {
         transform: translateY(0);
     }
 }
+
+/* ========================================
+   Preisseite
+   ======================================== */
+
+/* --- Page Hero (Unterseiten) --- */
+.page-hero {
+    padding: 140px 0 60px;
+    background: linear-gradient(135deg, var(--color-bg-soft) 0%, var(--color-primary-light) 50%, var(--color-bg-warm) 100%);
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.page-hero .hero-subtitle {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+/* --- Nav active link --- */
+.nav-links a.active {
+    color: var(--color-primary);
+}
+
+/* --- Stundensätze --- */
+.hourly-rates {
+    padding: 80px 0;
+    background: var(--color-bg);
+}
+
+.rates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.rate-card {
+    text-align: center;
+    padding: 36px 28px;
+    border-radius: var(--radius);
+    background: var(--color-bg-soft);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition);
+}
+
+.rate-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.rate-icon {
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.rate-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.rate-price {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+}
+
+.rate-price span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+}
+
+.rate-card p {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+}
+
+.rates-note {
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    margin-top: 32px;
+}
+
+/* --- Monatspakete --- */
+.packages {
+    padding: 80px 0;
+    background: var(--color-bg-soft);
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.package-card {
+    background: var(--color-bg);
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    transition: all var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.package-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.package-card.featured {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+}
+
+.package-badge {
+    position: absolute;
+    top: 0;
+    right: 24px;
+    background: var(--color-accent);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 0 0 8px 8px;
+}
+
+.package-header {
+    padding: 36px 32px 24px;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.package-header h3 {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+}
+
+.package-for {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+.package-price {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--color-text);
+}
+
+.package-card.featured .package-price {
+    color: var(--color-primary);
+}
+
+.package-price span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+}
+
+.package-features {
+    list-style: none;
+    padding: 24px 32px;
+    flex-grow: 1;
+}
+
+.package-features li {
+    padding: 8px 0;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.package-features li::before {
+    flex-shrink: 0;
+    font-weight: 700;
+    font-size: 0.85rem;
+    width: 20px;
+    text-align: center;
+}
+
+.package-features li.included::before {
+    content: '\2713';
+    color: var(--color-primary);
+}
+
+.package-features li.not-included {
+    color: var(--color-text-light);
+    opacity: 0.5;
+}
+
+.package-features li.not-included::before {
+    content: '\2717';
+    color: var(--color-text-light);
+}
+
+.btn-package {
+    margin: 0 32px 32px;
+    text-align: center;
+}
+
+/* --- FAQ --- */
+.faq {
+    padding: 80px 0;
+    background: var(--color-bg);
+}
+
+.faq-list {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 0;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-text);
+    cursor: pointer;
+    text-align: left;
+    transition: color var(--transition);
+}
+
+.faq-question:hover {
+    color: var(--color-primary);
+}
+
+.faq-chevron {
+    flex-shrink: 0;
+    transition: transform var(--transition);
+}
+
+.faq-item.open .faq-chevron {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 200px;
+}
+
+.faq-answer p {
+    padding-bottom: 20px;
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* --- CTA Section --- */
+.cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: #fff;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    margin-bottom: 16px;
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    max-width: 520px;
+    margin: 0 auto 32px;
+}
+
+.cta-section .btn-primary {
+    background: #fff;
+    color: var(--color-primary);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.cta-section .btn-primary:hover {
+    background: var(--color-bg-soft);
+    color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+/* --- Preisseite Responsive --- */
+@media (max-width: 900px) {
+    .rates-grid,
+    .packages-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 120px 0 48px;
+    }
+
+    .page-hero h1 {
+        font-size: 1.6rem;
+    }
+}
